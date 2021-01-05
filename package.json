@@ -1,0 +1,41 @@
+{
+  "name": "teach-calendar",
+  "version": "1.0.0",
+  "description": "Utility for Creating Google Classrooms from a teaching timetable",
+  "repository": "git@github.com:JoeSharp/teach-calendar.git",
+  "author": "Joe Sharp <ratracejoe@hotmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">=10.21.0"
+  },
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "nodemon",
+    "test": "jest"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^26.0.5",
+    "@types/lodash": "^4.14.149",
+    "jest": "^26.1.0",
+    "lodash": "^4.17.19",
+    "tslint": "^6.1.0",
+    "winston": "^3.2.1",
+    "googleapis": "^39.2.0",
+    "node-ical": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^13.9.2",
+    "typescript": "^3.8.3"
+  }
+}
